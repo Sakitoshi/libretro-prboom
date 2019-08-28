@@ -291,6 +291,36 @@ const char *s_HUSTR_30    = HUSTR_30;
 const char *s_HUSTR_31    = HUSTR_31;
 const char *s_HUSTR_32    = HUSTR_32;
 const char *s_HUSTR_33    = HUSTR_33;
+const char *s_MHUSTR_1    = MHUSTR_1;
+const char *s_MHUSTR_2    = MHUSTR_2;
+const char *s_MHUSTR_3    = MHUSTR_3;
+const char *s_MHUSTR_4    = MHUSTR_4;
+const char *s_MHUSTR_5    = MHUSTR_5;
+const char *s_MHUSTR_6    = MHUSTR_6;
+const char *s_MHUSTR_7    = MHUSTR_7;
+const char *s_MHUSTR_8    = MHUSTR_8;
+const char *s_MHUSTR_9    = MHUSTR_9;
+const char *s_MHUSTR_10   = MHUSTR_10;
+const char *s_MHUSTR_11   = MHUSTR_11;
+const char *s_MHUSTR_12   = MHUSTR_12;
+const char *s_MHUSTR_13   = MHUSTR_13;
+const char *s_MHUSTR_14   = MHUSTR_14;
+const char *s_MHUSTR_15   = MHUSTR_15;
+const char *s_MHUSTR_16   = MHUSTR_16;
+const char *s_MHUSTR_17   = MHUSTR_17;
+const char *s_MHUSTR_18   = MHUSTR_18;
+const char *s_MHUSTR_19   = MHUSTR_19;
+const char *s_MHUSTR_20   = MHUSTR_20;
+const char *s_MHUSTR_21   = MHUSTR_21;
+const char *s_NHUSTR_1    = NHUSTR_1;
+const char *s_NHUSTR_2    = NHUSTR_2;
+const char *s_NHUSTR_3    = NHUSTR_3;
+const char *s_NHUSTR_4    = NHUSTR_4;
+const char *s_NHUSTR_5    = NHUSTR_5;
+const char *s_NHUSTR_6    = NHUSTR_6;
+const char *s_NHUSTR_7    = NHUSTR_7;
+const char *s_NHUSTR_8    = NHUSTR_8;
+const char *s_NHUSTR_9    = NHUSTR_9;
 const char *s_PHUSTR_1    = PHUSTR_1;
 const char *s_PHUSTR_2    = PHUSTR_2;
 const char *s_PHUSTR_3    = PHUSTR_3;
@@ -411,6 +441,8 @@ const char *s_C3TEXT     = C3TEXT;
 const char *s_C4TEXT     = C4TEXT;
 const char *s_C5TEXT     = C5TEXT;
 const char *s_C6TEXT     = C6TEXT;
+const char *s_MASTERTEXT = MASTERTEXT;
+const char *s_NERVETEXT  = NERVETEXT;
 const char *s_P1TEXT     = P1TEXT;
 const char *s_P2TEXT     = P2TEXT;
 const char *s_P3TEXT     = P3TEXT;
@@ -644,6 +676,36 @@ static deh_strs deh_strlookup[] = { // not const any more, because of orig.
   {&s_HUSTR_31,"HUSTR_31", NULL},
   {&s_HUSTR_32,"HUSTR_32", NULL},
   {&s_HUSTR_33,"HUSTR_33", NULL},
+  {&s_MHUSTR_1,"MHUSTR_1", NULL},
+  {&s_MHUSTR_2,"MHUSTR_2", NULL},
+  {&s_MHUSTR_3,"MHUSTR_3", NULL},
+  {&s_MHUSTR_4,"MHUSTR_4", NULL},
+  {&s_MHUSTR_5,"MHUSTR_5", NULL},
+  {&s_MHUSTR_6,"MHUSTR_6", NULL},
+  {&s_MHUSTR_7,"MHUSTR_7", NULL},
+  {&s_MHUSTR_8,"MHUSTR_8", NULL},
+  {&s_MHUSTR_9,"MHUSTR_9", NULL},
+  {&s_MHUSTR_10,"MHUSTR_10", NULL},
+  {&s_MHUSTR_11,"MHUSTR_11", NULL},
+  {&s_MHUSTR_12,"MHUSTR_12", NULL},
+  {&s_MHUSTR_13,"MHUSTR_13", NULL},
+  {&s_MHUSTR_14,"MHUSTR_14", NULL},
+  {&s_MHUSTR_15,"MHUSTR_15", NULL},
+  {&s_MHUSTR_16,"MHUSTR_16", NULL},
+  {&s_MHUSTR_17,"MHUSTR_17", NULL},
+  {&s_MHUSTR_18,"MHUSTR_18", NULL},
+  {&s_MHUSTR_19,"MHUSTR_19", NULL},
+  {&s_MHUSTR_20,"MHUSTR_20", NULL},
+  {&s_MHUSTR_21,"MHUSTR_21", NULL},
+  {&s_NHUSTR_1,"NHUSTR_1", NULL},
+  {&s_NHUSTR_2,"NHUSTR_2", NULL},
+  {&s_NHUSTR_3,"NHUSTR_3", NULL},
+  {&s_NHUSTR_4,"NHUSTR_4", NULL},
+  {&s_NHUSTR_5,"NHUSTR_5", NULL},
+  {&s_NHUSTR_6,"NHUSTR_6", NULL},
+  {&s_NHUSTR_7,"NHUSTR_7", NULL},
+  {&s_NHUSTR_8,"NHUSTR_8", NULL},
+  {&s_NHUSTR_9,"NHUSTR_9", NULL},
   {&s_PHUSTR_1,"PHUSTR_1", NULL},
   {&s_PHUSTR_2,"PHUSTR_2", NULL},
   {&s_PHUSTR_3,"PHUSTR_3", NULL},
@@ -763,6 +825,8 @@ static deh_strs deh_strlookup[] = { // not const any more, because of orig.
   {&s_C4TEXT,"C4TEXT", NULL},
   {&s_C5TEXT,"C5TEXT", NULL},
   {&s_C6TEXT,"C6TEXT", NULL},
+  {&s_MASTERTEXT,"MASTERTEXT", NULL},
+  {&s_NERVETEXT,"NERVETEXT", NULL},
   {&s_P1TEXT,"P1TEXT", NULL},
   {&s_P2TEXT,"P2TEXT", NULL},
   {&s_P3TEXT,"P3TEXT", NULL},
@@ -923,6 +987,83 @@ const char **const mapnames2[] = // DOOM 2 map names.
   &s_HUSTR_32,
   &s_HUSTR_33,
 };
+
+
+const char **const mapnamesm[] = // MASTERLEVELS WAD map names.
+{
+  &s_MHUSTR_1,
+  &s_MHUSTR_2,
+  &s_MHUSTR_3,
+  &s_MHUSTR_4,
+  &s_MHUSTR_5,
+  &s_MHUSTR_6,
+  &s_MHUSTR_7,
+  &s_MHUSTR_8,
+  &s_MHUSTR_9,
+  &s_MHUSTR_10,
+  &s_MHUSTR_11,
+  &s_MHUSTR_12,
+  &s_MHUSTR_13,
+  &s_MHUSTR_14,
+  &s_MHUSTR_15,
+  &s_MHUSTR_16,
+  &s_MHUSTR_17,
+  &s_MHUSTR_18,
+  &s_MHUSTR_19,
+  &s_MHUSTR_20,
+  &s_MHUSTR_21,
+
+  &s_HUSTR_22, // Placeholders to avoid crashing with doom2 built-in demos.
+  &s_HUSTR_23,
+  &s_HUSTR_24,
+  &s_HUSTR_25,
+  &s_HUSTR_26,
+  &s_HUSTR_27,
+  &s_HUSTR_28,
+  &s_HUSTR_29,
+  &s_HUSTR_30,
+  &s_HUSTR_31,
+  &s_HUSTR_32,
+};
+
+
+const char **const mapnamesn[] = // NERVE WAD map names.
+{
+  &s_NHUSTR_1,
+  &s_NHUSTR_2,
+  &s_NHUSTR_3,
+  &s_NHUSTR_4,
+  &s_NHUSTR_5,
+  &s_NHUSTR_6,
+  &s_NHUSTR_7,
+  &s_NHUSTR_8,
+  &s_NHUSTR_9,
+
+  &s_HUSTR_10, // Placeholders to avoid crashing with doom2 built-in demos.
+  &s_HUSTR_11,
+  &s_HUSTR_12,
+  &s_HUSTR_13,
+  &s_HUSTR_14,
+  &s_HUSTR_15,
+  &s_HUSTR_16,
+  &s_HUSTR_17,
+  &s_HUSTR_18,
+  &s_HUSTR_19,
+  &s_HUSTR_20,
+  &s_HUSTR_21,
+  &s_HUSTR_22,
+  &s_HUSTR_23,
+  &s_HUSTR_24,
+  &s_HUSTR_25,
+  &s_HUSTR_26,
+  &s_HUSTR_27,
+  &s_HUSTR_28,
+  &s_HUSTR_29,
+  &s_HUSTR_30,
+  &s_HUSTR_31,
+  &s_HUSTR_32,
+};
+
 
 // CPhipps - const**const
 const char **const mapnamesp[] = // Plutonia WAD map names.

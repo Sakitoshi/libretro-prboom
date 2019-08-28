@@ -48,6 +48,7 @@
 
 boolean G_Responder(event_t *ev);
 boolean G_CheckDemoStatus(void);
+boolean secretexit;
 void G_DeathMatchSpawnPlayer(int playernum);
 void G_InitNew(skill_t skill, int episode, int map);
 void G_DeferedInitNew(skill_t skill, int episode, int map);
@@ -177,6 +178,7 @@ extern int  bodyquesize;       // killough 2/8/98: adustable corpse limit
 // Par times (new item with BOOM) - from g_game.c
 extern int pars[4][10];  // hardcoded array size
 extern int cpars[32];    // hardcoded array size
+extern int npars[9];     // hardcoded array size
 // CPhipps - Make savedesciption visible in wider scope
 #define SAVEDESCLEN 32
 extern char savedescription[SAVEDESCLEN];  // Description to save in savegame

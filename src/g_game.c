@@ -564,6 +564,16 @@ static void G_DoLoadLevel (void)
       else
          if (gamemap < 21)
             skytexture = R_TextureNumForName ("SKY2");
+
+      if (gamemission == pack_master)
+      {
+        if (gamemap == 12 || gamemap == 13 || (gamemap >= 16 && gamemap <= 18))
+          skytexture = R_TextureNumForName ("SKY2");
+        if (gamemap == 14 || gamemap == 15)
+          skytexture = R_TextureNumForName ("SKY1");
+        if (gamemap >= 19)
+          skytexture = R_TextureNumForName ("SKY3");
+      }
    }
    else /* and lets not forget about DOOM, Ultimate DOOM, SIGIL & extra Eps */
    {
@@ -1249,7 +1259,12 @@ int cpars[32] = {
   120,30          // 31-32
 };
 
-static boolean secretexit;
+// No Rest for the Living Par Times
+int npars[9] = {
+  75,105,120,105,210,105,165,105,135
+};
+
+boolean secretexit;
 
 /*
 ====================
@@ -1318,6 +1333,12 @@ void G_DoCompleted (void)
             wminfo.next = 30; break;
           case 31:
             wminfo.next = 31; break;
+          case 20:
+            if (gamemission == pack_master)
+              wminfo.next = 20;
+          case 4:
+            if (gamemission == pack_nerve)
+              wminfo.next = 8;
           case 2:
             if (bfgedition)
                wminfo.next = 32;
@@ -1331,6 +1352,15 @@ void G_DoCompleted (void)
             wminfo.next = 15; break;
           case 33:
             wminfo.next = 2; break;
+          case 21:
+            if (gamemission == pack_master)
+              break;
+          case 9:
+            if (gamemission == pack_nerve)
+              {
+              wminfo.next = 4;
+              break;
+              }
           default:
             wminfo.next = gamemap;
           }
@@ -1372,7 +1402,10 @@ void G_DoCompleted (void)
   wminfo.maxfrags = 0;
 
   if ( gamemode == commercial )
-    wminfo.partime = TICRATE*cpars[gamemap-1];
+    if ( gamemission == pack_nerve )
+      wminfo.partime = TICRATE*npars[gamemap-1];
+    else
+      wminfo.partime = TICRATE*cpars[gamemap-1];
   else
     wminfo.partime = TICRATE*pars[gameepisode][gamemap];
 
@@ -1423,10 +1456,22 @@ void G_WorldDone (void)
             break;
           // fall through
         case 6:
+          if (gamemission == pack_nerve || gamemission == pack_master)
+            break;
         case 11:
+          if (gamemission == pack_master)
+            break;
         case 20:
+          if (gamemission == pack_master && secretexit)
+            break;
         case 30:
           F_StartFinale ();
+        case 21:
+          if (gamemission == pack_master)
+            F_StartFinale();
+        case 8:
+          if (gamemission == pack_nerve)
+            F_StartFinale();
           break;
         }
     }

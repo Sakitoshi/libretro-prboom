@@ -82,6 +82,7 @@
 #include "d_deh.h"  // Ty 04/08/98 - Externalizations
 #include "lprintf.h"  // jff 08/03/98 - declaration of lprintf
 #include "am_map.h"
+#include "crc32.h"  // to calculate crc of the mission packs
 
 void GetFirstMap(int *ep, int *map); // Ty 08/29/98 - add "-warp x" functionality
 static void D_PageDrawer(void);
@@ -1048,6 +1049,41 @@ static void DoLooseFiles(void)
 /* cph - MBF-like wad/deh/bex autoload code */
 const char *wad_files[MAXLOADFILES], *deh_files[MAXLOADFILES];
 
+/* Check for NRFTL and Master Levels */
+static void CheckMissionPack(const char *pwadpath)
+{
+  struct stat sbuf;
+  unsigned int crcpwad;
+  int len = strlen(pwadpath);
+  char pwadfile[17];
+
+  // No Rest for the Living
+  sprintf(pwadfile, "%*s", 9, pwadpath+len-9);
+  if ((!strnicmp(pwadfile,"nerve.wad",9) && !stat(pwadpath,&sbuf) && sbuf.st_size == 3819855) ||
+      (!strnicmp(pwadfile,"nrftl.wad",9) && !stat(pwadpath,&sbuf) && sbuf.st_size == 3954644))
+    {
+    unsigned int crcnerve = 0xAD7F9292;
+    unsigned int crcnrftl = 0x9BA0ABCA;
+    crcpwad = CheckCrc32(pwadpath);
+    if (crcpwad == crcnerve || crcpwad == crcnrftl)
+      gamemission = pack_nerve;
+    }
+
+  // Master Levels
+  sprintf(pwadfile, "%*s", 16, pwadpath+len-16);
+  if (!strnicmp(pwadfile,"masterlevels.wad",16) && !stat(pwadpath,&sbuf) && sbuf.st_size == 3479715)
+    {
+    unsigned int crcmaster = 0x6BAEC89F;
+    crcpwad = CheckCrc32(pwadpath);
+    if (crcpwad == crcmaster)
+      {
+      gamemission = pack_master;
+      //if (!stat("mstrsky.wad",&sbuf))
+      //  D_AddFile("mstrsky.wad");
+      }
+    }
+}
+
 //
 // D_DoomMainSetup
 //
@@ -1253,6 +1289,7 @@ bool D_DoomMainSetup(void)
         lprintf(LO_WARN, "Failed to autoload %s\n", fname);
       else {
         D_AddFile(fpath,source_auto_load);
+        CheckMissionPack(fpath);
         modifiedgame = TRUE;
         free(fpath);
       }
@@ -1270,7 +1307,10 @@ bool D_DoomMainSetup(void)
     // until end of parms or another - preceded parm
     modifiedgame = TRUE;            // homebrew levels
     while (++p != myargc && *myargv[p] != '-')
+      {
       D_AddFile(myargv[p],source_pwad);
+      CheckMissionPack(myargv[p]);
+      }
   }
 
   p = M_CheckParm("-playdemo");

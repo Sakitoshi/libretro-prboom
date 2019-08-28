@@ -437,7 +437,9 @@ static void cheat_clev(char buf[3])
   // Catch invalid maps.
   if (epsd < 1 || map < 1 ||   // Ohmygod - this is not going to work.
      (epsd > MAX_EPISODE_NUM) || // allow sigil & custom episodes
-     (gamemode == shareware  && (epsd > 1 || map > 9  )))
+     (gamemode == shareware  && (epsd > 1 || map > 9  )) ||
+     (gamemission == pack_nerve && (epsd > 1 || map > 9 )) ||
+     (gamemission == pack_master && (epsd > 1 || map > 21 )))
     return;
 
   // Check if map exists

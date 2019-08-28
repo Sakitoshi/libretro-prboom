@@ -60,6 +60,8 @@ boolean hud_showweapons; /* show weapons HUD line */
 // These four shortcuts modifed to reflect char ** of mapnamesx[]
 #define HU_TITLE  (*mapnames[(gameepisode-1)*9+gamemap-1])
 #define HU_TITLE2 (*mapnames2[gamemap-1])
+#define HU_TITLEM (*mapnamesm[gamemap-1])
+#define HU_TITLEN (*mapnamesn[gamemap-1])
 #define HU_TITLEP (*mapnamesp[gamemap-1])
 #define HU_TITLET (*mapnamest[gamemap-1])
 #define HU_TITLEHEIGHT  1
@@ -228,6 +230,8 @@ static char hud_monsecstr[80];
 // See modified HUTITLEx macros
 extern char **mapnames[];
 extern char **mapnames2[];
+extern char **mapnamesm[];
+extern char **mapnamesn[];
 extern char **mapnamesp[];
 extern char **mapnamest[];
 
@@ -523,8 +527,10 @@ void HU_Start(void)
 
     case commercial:
     default:  // Ty 08/27/98 - modified to check mission for TNT/Plutonia
-      s = (gamemission==pack_tnt)  ? HU_TITLET :
-          (gamemission==pack_plut) ? HU_TITLEP : HU_TITLE2;
+      s = (gamemission==pack_tnt)    ? HU_TITLET :
+          (gamemission==pack_plut)   ? HU_TITLEP :
+          (gamemission==pack_master) ? HU_TITLEM :
+          (gamemission==pack_nerve)  ? HU_TITLEN : HU_TITLE2;
       break;
   } else s = "";
   while (*s)

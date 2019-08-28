@@ -344,24 +344,24 @@ extern const char *s_HUSTR_E4M8; // = HUSTR_E4M8;
 extern const char *s_HUSTR_E4M9; // = HUSTR_E4M9;
 
 
-//#define HUSTR_E5M1  "E5M1: Baphomet's Demesne";
+//#define HUSTR_E5M1  "E5M1: Baphomet's Demesne"
 extern const char *s_HUSTR_E5M1; // = HUSTR_E5M1;
-//#define HUSTR_E5M2  "E5M2: Sheol";
+//#define HUSTR_E5M2  "E5M2: Sheol"
 extern const char *s_HUSTR_E5M2; // = HUSTR_E5M2;
-//#define HUSTR_E5M3  "E5M3: Cages of the Damned";
+//#define HUSTR_E5M3  "E5M3: Cages of the Damned"
 extern const char *s_HUSTR_E5M3; // = HUSTR_E5M3;
-//#define HUSTR_E5M4  "E5M4: Paths of Wretchedness";
+//#define HUSTR_E5M4  "E5M4: Paths of Wretchedness"
 extern const char *s_HUSTR_E5M4; // = HUSTR_E5M4;
-//#define HUSTR_E5M5  "E5M5: Abaddon's Void";
+//#define HUSTR_E5M5  "E5M5: Abaddon's Void"
 extern const char *s_HUSTR_E5M5; // = HUSTR_E5M5;
-//#define HUSTR_E5M6  "E5M6: Unspeakable Persecution";
+//#define HUSTR_E5M6  "E5M6: Unspeakable Persecution"
 extern const char *s_HUSTR_E5M6; // = HUSTR_E5M6;
-//#define HUSTR_E5M7  "E5M7: Nightmare Underworld";
+//#define HUSTR_E5M7  "E5M7: Nightmare Underworld"
 extern const char *s_HUSTR_E5M7; // = HUSTR_E5M7;
-//#define HUSTR_E5M8  "E5M8: Halls of Perdition";
+//#define HUSTR_E5M8  "E5M8: Halls of Perdition"
 extern const char *s_HUSTR_E5M8; // = HUSTR_E5M8;
-//#define HUSTR_E5M9  "E5M9: Realm of Iblis";
-extern const char *s_HUSTR_E5M9; // = HUSTR_E5M9
+//#define HUSTR_E5M9  "E5M9: Realm of Iblis"
+extern const char *s_HUSTR_E5M9; // = HUSTR_E5M9;
 
 //#define HUSTR_1       "level 1: entryway"
 extern const char *s_HUSTR_1; // = HUSTR_1;
@@ -431,6 +431,68 @@ extern const char *s_HUSTR_31; // = HUSTR_31;
 //#define HUSTR_32      "level 32: grosse"
 extern const char *s_HUSTR_32; // = HUSTR_32;
 extern const char *s_HUSTR_33;
+
+//#define MHUSTR_1      "1: attack"
+extern const char *s_MHUSTR_1; // = MHUSTR_1;
+//#define MHUSTR_2      "2: canyon"
+extern const char *s_MHUSTR_2; // = MHUSTR_2;
+//#define MHUSTR_3      "3: the catwalk"
+extern const char *s_MHUSTR_3; // = MHUSTR_3;
+//#define MHUSTR_4      "4: the combine"
+extern const char *s_MHUSTR_4; // = MHUSTR_4;
+//#define MHUSTR_5      "5: the fistula"
+extern const char *s_MHUSTR_5; // = MHUSTR_5;
+//#define MHUSTR_6      "6: the garrison"
+extern const char *s_MHUSTR_6; // = MHUSTR_6;
+//#define MHUSTR_7      "7: titan manor"
+extern const char *s_MHUSTR_7; // = MHUSTR_7;
+//#define MHUSTR_8      "8: paradox"
+extern const char *s_MHUSTR_8; // = MHUSTR_8;
+//#define MHUSTR_9      "9: subspace"
+extern const char *s_MHUSTR_9; // = MHUSTR_9;
+//#define MHUSTR_10     "10: subterra"
+extern const char *s_MHUSTR_10; // = MHUSTR_10;
+//#define MHUSTR_11     "11: trapped on titan"
+extern const char *s_MHUSTR_11; // = MHUSTR_11;
+//#define MHUSTR_12     "12: virgil's lead"
+extern const char *s_MHUSTR_12; // = MHUSTR_12;
+//#define MHUSTR_13     "13: minos' judgement"
+extern const char *s_MHUSTR_13; // = MHUSTR_13;
+//#define MHUSTR_14     "14: bloodsea keep"
+extern const char *s_MHUSTR_14; // = MHUSTR_14;
+//#define MHUSTR_15     "15: mephisto's maosoleum"
+extern const char *s_MHUSTR_15; // = MHUSTR_15;
+//#define MHUSTR_16     "16: nessus"
+extern const char *s_MHUSTR_16; // = MHUSTR_16;
+//#define MHUSTR_17     "17: geryon"
+extern const char *s_MHUSTR_17; // = MHUSTR_17;
+//#define MHUSTR_18     "18: vesperas"
+extern const char *s_MHUSTR_18; // = MHUSTR_18;
+//#define MHUSTR_19     "19: black tower"
+extern const char *s_MHUSTR_19; // = MHUSTR_19;
+//#define MHUSTR_20     "20: the express elevator to hell"
+extern const char *s_MHUSTR_20; // = MHUSTR_20;
+//#define MHUSTR_21     "21: bad dream"
+extern const char *s_MHUSTR_21; // = MHUSTR_21;
+
+//#define NHUSTR_1      "level 1: the earth base"
+extern const char *s_NHUSTR_1; // = NHUSTR_1;
+//#define NHUSTR_2      "level 2: the pain labs"
+extern const char *s_NHUSTR_2; // = NHUSTR_2;
+//#define NHUSTR_3      "level 3: canyon of the dead"
+extern const char *s_NHUSTR_3; // = NHUSTR_3;
+//#define NHUSTR_4      "level 4: hell mountain"
+extern const char *s_NHUSTR_4; // = NHUSTR_4;
+//#define NHUSTR_5      "level 5: vivisection"
+extern const char *s_NHUSTR_5; // = NHUSTR_5;
+//#define NHUSTR_6      "level 6: inferno of blood"
+extern const char *s_NHUSTR_6; // = NHUSTR_6;
+//#define NHUSTR_7      "level 7: baron's banquet"
+extern const char *s_NHUSTR_7; // = NHUSTR_7;
+//#define NHUSTR_8      "level 8: tomb of malevolence"
+extern const char *s_NHUSTR_8; // = NHUSTR_8;
+//#define NHUSTR_9      "level 9: march of the demons"
+extern const char *s_NHUSTR_9; // = NHUSTR_9;
 
 //#define PHUSTR_1      "level 1: congo"
 extern const char *s_PHUSTR_1; // = PHUSTR_1;
@@ -885,6 +947,42 @@ extern const char* s_C5TEXT; // = C5TEXT;
 "BLAZE THROUGH THIS ONE!\n"
 */
 extern const char* s_C6TEXT; // = C6TEXT;
+
+
+// Master Levels for Doom 2 end:
+
+/*
+#define MASTERTEXT \
+"CONGRATULATIONS, YOU HAVE FINISHED...\n"\
+"\n"\
+"THE MASTER LEVELS\n"
+*/
+extern const char *s_MASTERTEXT; // = MASTERTEXT;
+
+
+// No Rest For The Living end:
+
+/*
+#define NERVETEXT \
+"Trouble was brewing again in your favorite\n"\
+"vacation spot... Hell. Some Cyberdemon\n"\
+"punk thought he could turn Hell into a\n"\
+"personal amusement park; and make Earth\n"\
+"the ticket booth.\n"\
+"\n"\
+"Well; that half-robot freak show didn't\n"\
+"know who was coming to the fair. There's\n"\
+"nothing like a shooting gallery full of\n"\
+"hellspawn to get the blood pumping...\n"\
+"\n"\
+"Now the walls of the demon's labyrinth\n"\
+"echo with the sound of his metallic limbs\n"\
+"hitting the floor. His death moan gurgles\n"\
+"out through the mess you left of his face.\n"\
+"\n"\
+"This ride is closed."
+*/
+extern const char *s_NERVETEXT; // = NERVETEXT;
 
 
 // after map 06
